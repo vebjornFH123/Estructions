@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>estructions</title>
+    <link rel="stylesheet" href="./stylesheet.css" />
+  </head>
+  <body
+    style="overflow: hidden; margin: 0; padding: 0; font-family: sans-serif">
+    <!-- Window for Three JS -->
+    <canvas id="cvs"></canvas>
+
+    <div class="logo"><span style="font-weight: bolder">E</span>STRUCTIONS</div>
+    <!-- info section star-->
+    <div class="info-cont">
+      <div class="container">
+        <div class="time-cont">
+          <div class="time-box">Byggetid</div>
+          <div class="time-info">20 min</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="people-cont">
+          <div class="people-box"></div>
+          <div class="people-info">
+            <img src="btn-imgs/man-img.svg" class="man-img" />
+            <img src="btn-imgs/multiply-img.svg" class="multiply-img" />
+            <span id="workers">2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-tool"></div>
+
+      <div class="container-screw"></div>
+    </div>
+    <!-- info section end-->
+    <!-- main menu start-->
+    <div class="menu-cont">
+      <div class="fullScreen-btn">
+        <img src="btn-imgs/FullScreen.svg" class="fullScreen-img" />
+      </div>
+      <div class="replay-btn">
+        <img src="btn-imgs/replay.svg" class="replay-img" />
+      </div>
+      <div class="camera-btn">
+        <img src="btn-imgs/locked-img.svg" class="lock-img" />
+      </div>
+
+      <div class="gear-btn">
+        <img src="btn-imgs/gear-img.svg" class="gear-img" />
+      </div>
+    </div>
+    <!-- main menu end-->
+
+    <!-- Settings menu start-->
+
+    <!-- Exit Settings -->
+    <div class="exit-settings-btn">
+      <img src="./btn-imgs/exit-img.svg" style="height: 30px" />
+    </div>
+
+    <!-- Settings Background -->
+    <div class="settings-bg"></div>
+
+    <!-- Settings Content -->
+    <div class="settings-cont">
+      <div class="settings-menu">
+        <h2 style="color: white; text-align: center">Settings</h2>
+        <div class="settings-row">
+          <span class="settings-txt">Dark Mode: </span><input type="checkbox" />
+        </div>
+        <div class="settings-row">
+          <span class="settings-txt">Language </span>
+          <div style="display: flex; gap: 5px">
+            <img
+              id="norwegian"
+              class="flag-btn"
+              src="./btn-imgs/languages/norwegian-ico.jpg" />
+            <img
+              id="english"
+              class="flag-btn"
+              src="./btn-imgs/languages/english-ico.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings menu end-->
+
+    <div class="interact-cont">
+      <div class="upper-cont">
+        <button class="nav-btn" id="previousBtn">
+          <img
+            style="transform: rotate(180deg)"
+            class="arrow-btn-img"
+            src="./btn-imgs/arrow-btn.svg" />
+        </button>
+        <div class="step-txt" id="stepTxt">Introduksjon</div>
+        <button class="nav-btn" id="nextBtn">
+          <img class="arrow-btn-img" src="./btn-imgs/arrow-btn.svg" />
+        </button>
+      </div>
+      <div class="anim-nav-cont">
+        <div class="anim-nav-slider-cont">
+          <div class="slider-width"></div>
+          <div class="slider-head">
+            <span class="slider-step-nmbr" id="sliderStepNmbr">0</span>
+          </div>
+          <div class="slider-line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instruction 3D Animation Object -->
+    <script type="module" src="./Scripts/instructionObject.js"></script>
+
+    <!-- Scene script for Three JS -->
+    <script type="module" src="/Scripts/threeScript.js"></script>
+  </body>
+</html>
